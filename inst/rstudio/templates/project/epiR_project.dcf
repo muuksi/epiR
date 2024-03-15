@@ -1,5 +1,5 @@
-Binding: hello_world
-Title: Example Project Template
+Binding: epiR_project
+Title: epiR Project Template
 OpenFiles: INDEX
 
 Parameter: check
@@ -18,7 +18,7 @@ Position: left
 Parameter: text
 Widget: TextInput
 Label: Text Input
-Default: Hello, world!
+Default: Dies ist ein Test
 Position: right
 
 Parameter: file
