@@ -5,6 +5,8 @@ Maintainer: Maximilian Hinse <maximilian@hinse.eu>
 Version: 0.0.1
 Description: R Package for distributing RStudio Project template with folder structure for reproduceable reserach in R.
 Depends: R (>= 3.3.2)
+Imports: tidyverse, lubridate
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
+URL: https://github.com/muuksi/epiR
