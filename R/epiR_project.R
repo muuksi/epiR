@@ -7,22 +7,30 @@
 #
 # The function itself just echos its inputs and outputs to a file called INDEX,
 # which is then opened by RStudio when the new project is opened.
+library(lubridate)
+library(here)
+
+#here::i_am("epiR_project.R")
+
 epiR_project <- function(path, ...) {
 
   # ensure path exists
   dir.create(path, recursive = TRUE, showWarnings = FALSE)
+  print(path)
+
+  here::i_am(path)
 
   # setup folder structure
-  dir.create("analysis/src", recursive = TRUE)
-  dir.create("communication/internal_comm", recursive = TRUE)
-  dir.create("communication/journal_comm", recursive = TRUE)
-  dir.create("data/data_clean", recursive = TRUE)
-  dir.create("data/data_raw", recursive = TRUE)
-  dir.create("dissemination/manuscripts", recursive = TRUE)
-  dir.create("dissemination/posters", recursive = TRUE)
-  dir.create("dissemination/presentations", recursive = TRUE)
-  dir.create("documentation", recursive = TRUE)
-  dir.create("misc", recursive = TRUE)
+  dir.create(here("analysis","src"), recursive = TRUE)
+  dir.create(here("communication","internal_comm"), recursive = TRUE)
+  dir.create(here("communication","journal_comm"), recursive = TRUE)
+  dir.create(here("data","data_clean"), recursive = TRUE)
+  dir.create(here("data","data_raw"), recursive = TRUE)
+  dir.create(here("dissemination","manuscripts"), recursive = TRUE)
+  dir.create(here("dissemination","posters"), recursive = TRUE)
+  dir.create(here("dissemination","presentations"), recursive = TRUE)
+  dir.create(here("documentation"), recursive = TRUE)
+  dir.create(here("misc"), recursive = TRUE)
 
   # generate header
   header <- c(
@@ -40,7 +48,7 @@ epiR_project <- function(path, ...) {
   header_2 <- c(
     "format: html",
     "editor: visual",
-    paste("date: ",ymd(today())),
+    paste("date: ",lubridate::ymd(today())),
     "---",
     "",
     "# Quarto Analysis",
@@ -56,8 +64,8 @@ epiR_project <- function(path, ...) {
     paste(header_2, collapse = "\n"),
     sep = "\n"
   )
-  library(lubridate)
+
   # write to index file
-  writeLines(contents, con = file.path(path, paste(ymd(today()),"_analysis.qmd")))
+  writeLines(contents, con = file.path(path, paste(lubridate::ymd(today()),"_analysis.qmd", sep = "")))
 
 }
