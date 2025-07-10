@@ -27,7 +27,7 @@ epiR_project <- function(path, ...) {
   dir.create(here("data","data_clean"), recursive = TRUE)
   dir.create(here("data","data_raw"), recursive = TRUE)
   dir.create(here("dissemination","manuscripts"), recursive = TRUE)
-  dir.create(here("dissemination","posters"), recursive = TRUE)
+  #dir.create(here("dissemination","posters"), recursive = TRUE)
   dir.create(here("dissemination","presentations"), recursive = TRUE)
   dir.create(here("documentation"), recursive = TRUE)
   dir.create(here("misc"), recursive = TRUE)
