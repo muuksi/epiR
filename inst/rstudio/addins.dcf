@@ -1,0 +1,4 @@
+Name: Neues epiR projekt
+Description: Erstellt ein neues standardisiertes Analyseprojekt mit Quarto, Git und renv
+Binding: create_analysis_template_addin
+Interactive: true

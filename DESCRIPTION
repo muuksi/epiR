@@ -1,12 +1,24 @@
 Package: epiR
 Title: RStudio Project Template for reproduceable reserach in R
-Authors@R (parsed):
+Authors@R (parsed): 
     * Maximilian Hinse <maximilian.hinse@charite.de> [aut, cre]
 Maintainer: Maximilian Hinse <maximilian.hinse@charite.de>
-Version: 0.0.1
+Version: 0.0.2
 Description: R Package for distributing RStudio Project template with folder structure for reproduceable reserach in R.
 Depends: R (>= 3.3.2)
-Imports: tidyverse, here, lubridate, usethis, gitcreds, httr, glue, renv
+Imports: 
+    shiny,
+    miniUI,
+    gitlabr,
+    tidyverse,
+    here,
+    lubridate,
+    usethis,
+    gitcreds,
+    httr,
+    glue,
+    renv,
+    rstudioapi
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true

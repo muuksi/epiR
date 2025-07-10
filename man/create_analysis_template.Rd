@@ -2,15 +2,24 @@
 % Please edit documentation in R/template_creator.R
 \name{create_analysis_template}
 \alias{create_analysis_template}
-\title{Create a complete analysis project folder with optional Git and GitLab integration}
+\title{Create a full analysis template}
 \usage{
-create_analysis_template(path, project_name = "analysis_project")
+create_analysis_template(
+  path,
+  project_name = "analysis_project",
+  git = TRUE,
+  gitlab = TRUE,
+  gitlab_url = "https://git.bihealth.org",
+  open = TRUE
+)
 }
 \arguments{
-\item{path}{Character. Path to base directory.}
+\item{path}{Project path}
 
-\item{project_name}{Character. Project folder name.}
+\item{project_name}{Name of the project}
+
+\item{gitlab_url}{GitLab URL (default: git.bihealth.org)}
 }
 \description{
-Create a complete analysis project folder with optional Git and GitLab integration
+Create a full analysis template
 }
