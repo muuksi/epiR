@@ -2,15 +2,15 @@
 % Please edit documentation in R/template_creator.R
 \name{create_analysis_template}
 \alias{create_analysis_template}
-\title{Create a project template with folders and Quarto file}
+\title{Create a complete analysis project folder with optional Git and GitLab integration}
 \usage{
 create_analysis_template(path, project_name = "analysis_project")
 }
 \arguments{
-\item{path}{Character. Path where the analysis project will be created.}
+\item{path}{Character. Path to base directory.}
 
-\item{project_name}{Character. Name for the project folder and Rproj file.}
+\item{project_name}{Character. Project folder name.}
 }
 \description{
-Create a project template with folders and Quarto file
+Create a complete analysis project folder with optional Git and GitLab integration
 }
